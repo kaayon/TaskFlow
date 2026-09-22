@@ -1,0 +1,322 @@
+/* ============================================
+   Profile Page Styles
+   ============================================ */
+
+.profile {
+  padding: var(--space-10) 0 var(--space-16);
+}
+
+.profile-page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-8);
+}
+
+/* --- Loading --- */
+.profile-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: var(--space-4);
+  color: var(--text-tertiary);
+}
+
+/* --- Profile Card --- */
+.profile-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-initials {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-inverse);
+  letter-spacing: -0.02em;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
+.profile-email {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-2);
+}
+
+.profile-bio {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.profile-edit-btn {
+  margin-top: var(--space-2);
+}
+
+/* --- Profile Form --- */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.profile-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-top: var(--space-2);
+}
+
+/* --- Stats Cards --- */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.profile-stat-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  transition: all var(--transition-fast);
+}
+
+.profile-stat-card:hover {
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-stat-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--accent-subtle);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.profile-stat-icon.active-icon {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.profile-stat-icon.completed-icon {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.profile-stat-icon.rate-icon {
+  background-color: var(--accent-subtle);
+  color: var(--text-primary);
+}
+
+.profile-stat-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.profile-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+/* --- Activity --- */
+.profile-activity {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.profile-section-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.01em;
+}
+
+.activity-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.activity-bar {
+  display: flex;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--border-light);
+  overflow: hidden;
+}
+
+.activity-bar-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.activity-bar-fill.completed-fill {
+  background-color: var(--text-primary);
+}
+
+.activity-bar-fill.active-fill {
+  background-color: var(--border-strong);
+}
+
+.activity-legend {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.activity-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-dot.completed-dot {
+  background-color: var(--text-primary);
+}
+
+.legend-dot.active-dot {
+  background-color: var(--border-strong);
+}
+
+/* --- Account --- */
+.profile-account {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.account-row:last-child {
+  border-bottom: none;
+}
+
+.account-label {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.account-value {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .profile {
+    padding: var(--space-6) 0 var(--space-10);
+  }
+
+  .profile-card {
+    padding: var(--space-6);
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .profile-initials {
+    font-size: 1.25rem;
+  }
+
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-form-actions {
+    flex-direction: column;
+  }
+
+  .profile-form-actions .btn {
+    width: 100%;
+  }
+}
