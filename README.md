@@ -30,22 +30,57 @@ TaskFlow is a simple **Todo application** built with the MERN stack. It is desig
 
 ## 📁 Project Structure
 
-```text
 TaskFlow/
+├── backend/
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── models/
+│   │   ├── Task.js
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── tasks.js
+│   │   └── user.js
+│   ├── services/
+│   │   └── storage.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+│
 ├── frontend/
+│   ├── public/
+│   │   ├── favicon.svg
+│   │   └── icons.svg
 │   ├── src/
 │   │   ├── components/
+│   │   │   └── Navbar/
+│   │   │       ├── Navbar.css
+│   │   │       └── Navbar.jsx
 │   │   ├── pages/
+│   │   │   ├── Home/
+│   │   │   │   ├── Home.css
+│   │   │   │   └── Home.jsx
+│   │   │   ├── Landing/
+│   │   │   │   ├── Landing.css
+│   │   │   │   └── Landing.jsx
+│   │   │   └── Profile/
+│   │   │       ├── Profile.css
+│   │   │       └── Profile.jsx
+│   │   ├── App.css
 │   │   ├── App.jsx
+│   │   ├── index.css
 │   │   └── main.jsx
-│   └── ...
-│
-├── backend/
-│   ├── ...
-│   └── ...
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
 │
 └── README.md
-```
+
 
 ## ✨ What TaskFlow Can Do
 
