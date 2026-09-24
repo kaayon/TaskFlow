@@ -20,13 +20,24 @@ const taskSchema = new mongoose.Schema(
     },
     priority: {
       type: String,
-      enum: ['low', 'medium', 'high'],
+      enum: {
+        values: ['low', 'medium', 'high'],
+        message: 'Priority must be either low, medium, or high',
+      },
       default: 'medium',
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      default: null,
     },
   },
   {
     timestamps: true,
   }
 );
+
+// Index for performance
+taskSchema.index({ user: 1, createdAt: -1 });
 
 module.exports = mongoose.model('Task', taskSchema);
